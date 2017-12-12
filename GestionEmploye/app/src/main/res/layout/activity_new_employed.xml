@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mask="http://schemas.android.com/apk/res"
+    android:id="@+id/activity_new_employed"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.fr_philippe.gestionemploye.NewEmployedActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorButton"
+            app:tabMode="fixed"
+            app:popupTheme="@style/GestionEmployeColor" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="3dp"
+        android:background="@color/colorWrite">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/myrect"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Employed"
+                android:textSize="22sp"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/textView" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/enfoPerso"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#ffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Information Personnel"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/transparent" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/userlastName_text_input_layout"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="12dp">
+
+                    <EditText
+                        android:id="@+id/userlastName"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:ems="10"
+                        android:hint="Last Name" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/username_text_input_layout"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="12dp">
+
+                    <EditText
+                        android:id="@+id/etNom"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:ems="10"
+                        android:hint="First Name" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etNumSocial_text_input_layout"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="70dp">
+
+                    <EditText
+                        android:id="@+id/etNumSocial"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/username_text_input_layout"
+                        android:layout_alignStart="@+id/username_text_input_layout"
+                        android:layout_below="@+id/username_text_input_layout"
+                        android:layout_marginTop="16dp"
+                        android:hint="Social number" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/date_input_text_input_layout"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="70dp">
+
+                    <EditText
+                        android:id="@+id/date_input"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/userlastName_text_input_layout"
+                        android:layout_alignStart="@+id/userlastName_text_input_layout"
+                        android:layout_below="@+id/userlastName_text_input_layout"
+                        android:layout_marginTop="16dp"
+                        android:hint="Date of birth"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/spSex"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/date_input_text_input_layout"
+                    android:layout_alignStart="@+id/date_input_text_input_layout"
+                    android:layout_below="@+id/date_input_text_input_layout"
+                    android:layout_marginTop="120dp"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/spStatus"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/etNumSocial_text_input_layout"
+                    android:layout_alignStart="@+id/etNumSocial_text_input_layout"
+                    android:layout_below="@+id/etNumSocial_text_input_layout"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="120dp"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etTell_text_input_layout"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="130dp">
+                    <EditText
+                        android:id="@+id/etTel"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/spSex"
+                        android:layout_alignStart="@+id/spSex"
+                        android:layout_below="@+id/spSex"
+                        android:hint="Telephone" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/email_input_text_input_layout"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="130dp">
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/spStatus"
+                        android:layout_alignStart="@+id/spStatus"
+                        android:layout_below="@+id/spStatus"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:inputType="textEmailAddress"
+                        android:hint="Email" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etFonction_text_input_layout"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="190dp">
+                    <EditText
+                        android:id="@+id/etFonction"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/spTypeEmploye"
+                        android:layout_alignStart="@+id/spTypeEmploye"
+                        android:layout_below="@+id/spTypeEmploye"
+                        android:layout_marginTop="16dp"
+                        android:hint=" Employed Fontion" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etService_input_text_input_layout"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="190dp">
+                    <EditText
+                        android:id="@+id/etService"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/etSalaire"
+                        android:layout_alignStart="@+id/etSalaire"
+                        android:layout_below="@+id/etSalaire"
+                        android:layout_marginTop="16dp"
+                        android:hint="Service" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Contrat"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/spTypeEmploye"
+                        android:layout_width="250dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="3dp"/>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Adresse"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/transparent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/etRegion_text_input_layout"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginTop="8dp">
+
+                        <EditText
+                            android:id="@+id/etRegion"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="18dp"
+                            android:layout_marginRight="18dp"
+                            android:layout_marginTop="16dp"
+                            android:ems="10"
+                            android:hint="State" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/etVille_input_text_input_layout"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:id="@+id/etVille"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/etPays"
+                            android:layout_alignStart="@+id/etPays"
+                            android:layout_below="@+id/etPays"
+                            android:layout_marginTop="16dp"
+                            android:hint="City" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/etCommune_text_input_layout"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginTop="65dp">
+
+                        <EditText
+                            android:id="@+id/etCommune"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/etRegion"
+                            android:layout_alignStart="@+id/etRegion"
+                            android:layout_below="@+id/etRegion"
+                            android:layout_marginTop="16dp"
+                            android:hint="Commune" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/etRue_input_text_input_layout"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="65dp">
+
+                        <EditText
+                            android:id="@+id/etRue"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/etVille"
+                            android:layout_alignStart="@+id/etVille"
+                            android:layout_below="@+id/etVille"
+                            android:layout_marginTop="16dp"
+                            android:hint="Street" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/etNumero_input_text_input_layout"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="120dp">
+
+                        <EditText
+                            android:id="@+id/etNumero"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/etCommune"
+                            android:layout_alignStart="@+id/etCommune"
+                            android:layout_below="@+id/etCommune"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="16dp"
+                            android:hint="Number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnsaveEmpl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/etNumero_input_text_input_layout"
+                        android:layout_alignStart="@+id/etNumero_input_text_input_layout"
+                        android:layout_below="@+id/etCommune_text_input_layout"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginTop="90dp"
+                        android:background="@color/colorButton"
+                        android:onClick="saveEmploye"
+                        android:text="Save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWrite"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.fr_philippe.gestionemploye.PayrollActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorButton"
+            app:tabMode="fixed"
+            app:popupTheme="@style/GestionEmployeColor" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="3dp"
+        android:background="@color/colorWrite">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/myrect"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payroll"
+                android:drawableLeft="@drawable/ic_payment_write_24dp"
+                android:textSize="22sp"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/textView" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:padding="20dp"
+            android:background="@color/colorWrite"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etCodeEmplPayroll"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:inputType="text"
+                android:hint="Code Employe"
+                android:layout_marginTop="16dp" />
+            <Spinner
+                android:id="@+id/spTypePaiement"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/etCodeEmplPayroll"
+                android:layout_alignStart="@+id/etCodeEmplPayroll"
+                android:layout_below="@+id/etCodeEmplPayroll"
+                android:layout_marginTop="15dp" />
+
+            <EditText
+                android:id="@+id/etPayrollMontant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="0dp"
+                android:layout_alignLeft="@+id/spTypePaiement"
+                android:layout_alignStart="@+id/spTypePaiement"
+                android:layout_below="@+id/spTypePaiement"
+                android:ems="5"
+                android:hint="Montant"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etDatePayroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Date (DD/MM/YY)"
+                android:inputType="date"
+                android:layout_alignLeft="@+id/etPayrollMontant"
+                android:layout_alignStart="@+id/etPayrollMontant"
+                android:layout_below="@+id/etPayrollMontant"/>
+
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="22dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginRight="11dp"
+                android:background="@color/colorButton"
+                android:text="Enregistrer"
+                android:onClick="savePayroll"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWrite"
+                android:textSize="16sp" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

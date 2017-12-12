@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fr_philippe.gestionemploye">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SlideShowActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".DashbordActivity"
+            android:label="@string/title_activity_dashbord"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".NewEmployedActivity" />
+        <activity
+            android:name=".CongeActivity"
+            android:label="@string/title_activity_conge"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ProfilActivity" />
+        <activity
+            android:name=".PayrollActivity"
+            android:label="@string/title_activity_payroll"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".PromotionActivity" />
+        <activity android:name=".FonctionActivity" />
+        <activity
+            android:name=".ListEmployeActivity"
+            android:label="@string/title_activity_list_employe"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ResultSearchListEmployeActivity" />
+        <activity android:name=".ServiceActivity"></activity>
+    </application>
+
+</manifest>

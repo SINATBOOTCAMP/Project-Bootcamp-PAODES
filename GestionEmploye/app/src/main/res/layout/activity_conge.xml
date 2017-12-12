@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.fr_philippe.gestionemploye.CongeActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorButton"
+            app:tabMode="fixed"
+            app:popupTheme="@style/GestionEmployeColor" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/colorWrite">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/myrect"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Demande de conge"
+                android:textSize="22sp"
+                android:drawableLeft="@drawable/ic_event_busy_write_24dp"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/textView" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="@color/colorWrite">
+
+            <EditText
+                android:id="@+id/etCodeEmpConge"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:inputType="text"
+                android:hint="Code Employe"
+                android:layout_marginTop="16dp" />
+
+            <Spinner
+                android:id="@+id/spTypeConge"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/etCodeEmpConge"
+                android:layout_alignStart="@+id/etCodeEmpConge"
+                android:layout_below="@+id/etCodeEmpConge"
+                android:layout_marginTop="1dp" />
+
+            <EditText
+                android:id="@+id/etDateDebutConge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/spTypeConge"
+                android:layout_alignStart="@+id/spTypeConge"
+                android:layout_below="@+id/spTypeConge"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/date_debut_text_hint"
+                android:inputType="date" />
+
+
+
+            <EditText
+                android:id="@+id/etDateFinConge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/spTypeConge"
+                android:layout_alignStart="@+id/spTypeConge"
+                android:layout_below="@+id/spTypeConge"
+                android:layout_marginTop="80dp"
+                android:ems="10"
+                android:hint="@string/date_fin_text_hint"
+                android:inputType="date" />
+
+
+
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spTypeConge"
+                android:layout_marginTop="124dp"
+                android:layout_marginBottom="24dp"
+                android:layout_toEndOf="@+id/spTypeConge"
+                android:layout_toRightOf="@+id/spTypeConge"
+                android:background="@drawable/blue_button"
+                android:text="@string/save_text_button"
+                android:textAllCaps="false"
+                android:onClick="saveConge"
+                android:textColor="@color/colorWrite"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.fr_philippe.gestionemploye.ServiceActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorButton"
+            app:tabMode="fixed"
+            app:popupTheme="@style/GestionEmployeColor" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="3dp"
+        android:background="@color/colorWrite">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/myrect"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Service"
+                android:textSize="22sp"
+                android:drawableLeft="@drawable/ic_bookmark_black_24dp"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/textView" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWrite">
+
+
+            <EditText
+                android:id="@+id/etIdService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="28dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Id of service" />
+
+
+
+            <EditText
+                android:id="@+id/etNonService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/etIdService"
+                android:layout_alignStart="@+id/etIdService"
+                android:layout_below="@+id/etIdService"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Name of the service"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btEnregistrer"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/etNonService"
+                android:layout_marginEnd="20dp"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWrite"
+                android:background="@color/colorButton"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="20dp"
+                android:text="Enregistrer" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.fr_philippe.gestionemploye.PromotionActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorButton"
+            app:tabMode="fixed"
+            app:popupTheme="@style/GestionEmployeColor" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="3dp"
+        android:background="@color/colorWrite">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/myrect"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_grade_black_24dp"
+                android:text="Promotion"
+                android:textSize="22sp"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/textView" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWrite"
+            android:layout_marginTop="5dp">
+
+
+            <EditText
+                android:id="@+id/etEmploye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="18dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <Spinner
+                android:id="@+id/spTypeEmploye"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/etEmploye"
+                android:layout_alignStart="@+id/etEmploye"
+                android:layout_below="@+id/etEmploye"
+                android:layout_marginTop="18dp" />
+
+            <Spinner
+                android:id="@+id/spService"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/spTypeEmploye"
+                android:layout_alignStart="@+id/spTypeEmploye"
+                android:layout_below="@+id/spTypeEmploye"
+                android:layout_marginTop="11dp" />
+
+            <Spinner
+                android:id="@+id/spFonction"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/spService"
+                android:layout_alignStart="@+id/spService"
+                android:layout_below="@+id/spService"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/etSalaire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/spFonction"
+                android:layout_alignStart="@+id/spFonction"
+                android:layout_below="@+id/spFonction"
+                android:layout_marginTop="22dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <Button
+                android:id="@+id/btEnregistrer"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/etSalaire"
+                android:layout_marginEnd="22dp"
+                android:background="@color/colorButton"
+                android:layout_marginRight="22dp"
+                android:textColor="@color/colorWrite"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="24dp"
+                android:text="Enregistrer" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

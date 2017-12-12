@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Gestion Employe</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_activity_dashbord">DashbordActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_activite">Activite</string>
+    <string name="menu_notifications">Notifications</string>
+    <string name="prenom">Prenom</string>
+    <string name="nom">Nom</string>
+    <string name="username_required">Vous devez saisir un Nom</string>
+    <string name="numero_social">Numero Social</string>
+    <string name="date_naiss">Date Naiss</string>
+
+    <string-array name="sex_employed">
+        <item>Masculin</item>
+        <item>Feminin</item>
+    </string-array>
+
+    <string-array name="status_employed">
+        <item>Married</item>
+        <item>Divorce</item>
+        <item>Celibataire</item>
+        <item>Union Libre</item>
+    </string-array>
+
+    <string-array name="type_employed">
+        <item>Stage</item>
+        <item>Saisonnier</item>
+        <item>Contractuels à plein temps</item>
+        <item>Contractuels à temps partiel</item>
+    </string-array>
+
+    <string-array name="type_conge">
+        <item>Congés annuels payés</item>
+        <item>Congé ordinaire</item>
+        <item>Congé de maternité</item>
+        <item>Congé pour événements familiaux</item>
+        <item>Congé de récompense</item>
+        <item>Congé de maladie</item>
+        <item>Congé sans solde</item>
+    </string-array>
+
+    <string-array name="vacation_date_debut_conge">
+        <item>A partir du matin</item>
+        <item>A partir de matin</item>
+    </string-array>
+
+
+    <string-array name="payroll_type">
+        <item>Cheque</item>
+        <item>Cash</item>
+    </string-array>
+
+
+    <string-array name="vacation_date_fin_conge">
+        <item>Au midi</item>
+        <item>Au soir</item>
+    </string-array>
+
+    <string-array name="status_conge">
+        <item>Planifiee</item>
+        <item>Non Planifiee</item>
+    </string-array>
+
+    <string name="title_activity_new_employe">Employe</string>
+    <string name="title_activity_payroll">Payroll</string>
+    <string name="title_activity_conge">Demande de Conge</string>
+    <string name="title_activity_list_employe">List Employe</string>
+    <string name="search_content">Search</string>
+    <string name="save_text_button">Enregistrer</string>
+    <string name="date_debut_text_hint">Date Debut(DD/MM/YY)</string>
+    <string name="date_fin_text_hint">Date Fin(DD/MM/YY)</string>
+
+</resources>

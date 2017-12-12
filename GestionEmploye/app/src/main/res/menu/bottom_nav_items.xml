@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:title="@string/menu_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        />
+    <item
+        android:id="@+id/menu_activite"
+        android:title="@string/menu_activite"
+        android:icon="@drawable/ic_search_black_24dp"
+        />
+    <item
+        android:id="@+id/menu_notifications"
+        android:title="@string/menu_notifications"
+        android:icon="@drawable/ic_notifications_black_24dp" />
+</menu>

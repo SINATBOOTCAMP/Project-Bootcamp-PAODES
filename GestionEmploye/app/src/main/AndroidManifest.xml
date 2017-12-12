@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fr_philippe.gestionemploye">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,7 +27,7 @@
         <activity
             android:name=".CongeActivity"
             android:label="@string/title_activity_conge"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity android:name=".ProfilActivity" />
         <activity
             android:name=".PayrollActivity"
@@ -37,7 +39,8 @@
             android:name=".ListEmployeActivity"
             android:label="@string/title_activity_list_employe"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ResultSearchListEmployeActivity"></activity>
+        <activity android:name=".ResultSearchListEmployeActivity" />
+        <activity android:name=".ServiceActivity"></activity>
     </application>
 
 </manifest>

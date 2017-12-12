@@ -38,30 +38,30 @@
             android:orientation="vertical">
 
             <EditText
-                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:id="@+id/etemail"
                 android:layout_width="match_parent"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
                 android:layout_height="wrap_content"
-                android:background="@color/blueNoir"
-                android:id="@+id/etusername"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:padding="10dp"
-                android:hint="User Name"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/blueNoir"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:hint="Email"
+                android:padding="10dp" />
 
             <EditText
-                android:drawableLeft="@drawable/ic_https_black_24dp"
-                android:inputType="numberPassword"
+                android:id="@+id/etpass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
                 android:layout_gravity="center"
-                android:id="@+id/etpass"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:background="@color/blueNoir"
-                android:padding="10dp"
-                android:hint="Password"/>
+                android:drawableLeft="@drawable/ic_https_black_24dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="10dp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -74,9 +74,15 @@
                 android:text="Connect"
                 android:textSize="18sp"
                 android:textAllCaps="false"
-                android:onClick="onSubmit"
+                android:onClick="loginUser"
                 android:layout_marginTop="25dp"/>
-
+            <TextView
+                android:id="@+id/login_error"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#e30000"
+                android:textStyle="bold"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

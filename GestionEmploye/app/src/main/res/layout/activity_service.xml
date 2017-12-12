@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.fr_philippe.gestionemploye.CongeActivity">
+    tools:context="com.example.fr_philippe.gestionemploye.ServiceActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -29,6 +28,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical"
+        android:elevation="3dp"
         android:background="@color/colorWrite">
 
         <LinearLayout
@@ -42,9 +42,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Demande de conge"
+                android:text="New Service"
                 android:textSize="22sp"
-                android:drawableLeft="@drawable/ic_event_busy_write_24dp"
+                android:drawableLeft="@drawable/ic_bookmark_black_24dp"
                 android:fontFamily="cursive"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
@@ -63,81 +63,61 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="5dp">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="600dp"
+            android:layout_height="wrap_content"
             android:background="@color/colorWrite">
 
-            <EditText
-                android:id="@+id/etCodeEmpConge"
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:inputType="text"
-                android:hint="Code Employe"
-                android:layout_marginTop="16dp" />
-
-            <Spinner
-                android:id="@+id/spTypeConge"
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:layout_alignLeft="@+id/etCodeEmpConge"
-                android:layout_alignStart="@+id/etCodeEmpConge"
-                android:layout_below="@+id/etCodeEmpConge"
-                android:layout_marginTop="1dp" />
 
             <EditText
-                android:id="@+id/etDateDebutConge"
+                android:id="@+id/etIdService"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/spTypeConge"
-                android:layout_alignStart="@+id/spTypeConge"
-                android:layout_below="@+id/spTypeConge"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="28dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Id of service" />
+
+
+
+            <EditText
+                android:id="@+id/etNonService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/etIdService"
+                android:layout_alignStart="@+id/etIdService"
+                android:layout_below="@+id/etIdService"
                 android:layout_marginTop="16dp"
                 android:ems="10"
-                android:hint="@string/date_debut_text_hint"
-                android:inputType="date" />
-
-
-
-            <EditText
-                android:id="@+id/etDateFinConge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/spTypeConge"
-                android:layout_alignStart="@+id/spTypeConge"
-                android:layout_below="@+id/spTypeConge"
-                android:layout_marginTop="80dp"
-                android:ems="10"
-                android:hint="@string/date_fin_text_hint"
-                android:inputType="date" />
-
-
-
-
+                android:hint="Name of the service"
+                android:inputType="text" />
 
             <Button
-                android:id="@+id/button"
-                android:layout_width="150dp"
+                android:id="@+id/btEnregistrer"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/spTypeConge"
-                android:layout_marginTop="124dp"
-                android:layout_marginBottom="24dp"
-                android:layout_toEndOf="@+id/spTypeConge"
-                android:layout_toRightOf="@+id/spTypeConge"
-                android:background="@drawable/blue_button"
-                android:text="@string/save_text_button"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/etNonService"
+                android:layout_marginEnd="20dp"
+                android:textSize="16sp"
                 android:textAllCaps="false"
-                android:onClick="saveConge"
                 android:textColor="@color/colorWrite"
-                android:textSize="16sp" />
-
+                android:background="@color/colorButton"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="20dp"
+                android:text="Enregistrer" />
 
         </RelativeLayout>
 
     </ScrollView>
-
 
 </LinearLayout>

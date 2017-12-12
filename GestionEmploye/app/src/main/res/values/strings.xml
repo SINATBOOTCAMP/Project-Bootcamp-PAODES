@@ -50,6 +50,13 @@
         <item>A partir de matin</item>
     </string-array>
 
+
+    <string-array name="payroll_type">
+        <item>Cheque</item>
+        <item>Cash</item>
+    </string-array>
+
+
     <string-array name="vacation_date_fin_conge">
         <item>Au midi</item>
         <item>Au soir</item>

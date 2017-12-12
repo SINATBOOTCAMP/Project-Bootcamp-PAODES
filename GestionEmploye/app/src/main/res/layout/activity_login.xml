@@ -38,30 +38,30 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/etemail"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
                 android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
                 android:layout_height="wrap_content"
+                android:background="@color/blueNoir"
+                android:id="@+id/etusername"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@color/blueNoir"
-                android:drawableLeft="@drawable/ic_person_black_24dp"
-                android:hint="Email"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:hint="User Name"/>
 
             <EditText
-                android:id="@+id/etpass"
+                android:drawableLeft="@drawable/ic_https_black_24dp"
+                android:inputType="numberPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:id="@+id/etpass"
                 android:background="@color/blueNoir"
-                android:drawableLeft="@drawable/ic_https_black_24dp"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:hint="Password"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -74,15 +74,9 @@
                 android:text="Connect"
                 android:textSize="18sp"
                 android:textAllCaps="false"
-                android:onClick="loginUser"
+                android:onClick="onSubmit"
                 android:layout_marginTop="25dp"/>
-            <TextView
-                android:id="@+id/login_error"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:textColor="#e30000"
-                android:textStyle="bold"/>
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

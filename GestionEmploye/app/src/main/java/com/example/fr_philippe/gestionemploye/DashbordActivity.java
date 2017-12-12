@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,12 +15,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
-
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-
-import cz.msebera.android.httpclient.Header;
 
 public class DashbordActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -142,7 +136,7 @@ public class DashbordActivity extends AppCompatActivity
     }
 
     public void newOmployed(View v){
-        Intent p=new Intent(this,NewEmployedActivity.class);
+        Intent p=new Intent(this,ListEmployeActivity.class);
         startActivity(p);
     }
 
@@ -160,7 +154,7 @@ public class DashbordActivity extends AppCompatActivity
     }
 
     public void newPromotion(View v){
-        Intent p=new Intent(this,PayrollActivity.class);
+        Intent p=new Intent(this,PromotionActivity.class);
         startActivity(p);
     }
 
@@ -168,44 +162,4 @@ public class DashbordActivity extends AppCompatActivity
         Intent p=new Intent(this,PayrollActivity.class);
         startActivity(p);
     }
-
-    public void logout(){
-        String url = "http://192.168.128.144:8080/SinatEnterpriseWeb/login";
-        // Can specify query string params directly or through RequestParams.
-
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.get(url, new AsyncHttpResponseHandler() {
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-
-                Toast.makeText(getApplicationContext(), "You are successfully logged out!", Toast.LENGTH_LONG).show();
-                Intent i=new Intent(getApplicationContext(),LoginActivity.class);
-                startActivity(i);
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                // Hide Progress Dialog
-
-                // When Http response code is '404'
-                if (statusCode == 404) {
-                    Toast.makeText(getApplicationContext(), "Requested resource not found", Toast.LENGTH_LONG).show();
-                }
-                // When Http response code is '500'
-                else if (statusCode == 500) {
-                    Toast.makeText(getApplicationContext(), "Something went wrong at server end", Toast.LENGTH_LONG).show();
-                }
-                // When Http response code other than 404, 500
-                else {
-                    Toast.makeText(getApplicationContext(), "Unexpected Error occcured! [Most common Error: Device might not be connected to Internet or remote server is not up and running]", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
-
-
-
-
-
 }

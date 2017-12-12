@@ -71,25 +71,16 @@
             android:layout_height="600dp"
             android:background="@color/colorWrite">
 
-            <EditText
-                android:id="@+id/etCodeEmpConge"
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:inputType="text"
-                android:hint="Code Employe"
-                android:layout_marginTop="16dp" />
-
             <Spinner
                 android:id="@+id/spTypeConge"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:layout_alignLeft="@+id/etCodeEmpConge"
-                android:layout_alignStart="@+id/etCodeEmpConge"
-                android:layout_below="@+id/etCodeEmpConge"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="1dp" />
 
             <EditText
-                android:id="@+id/etDateDebutConge"
+                android:id="@+id/etDateDebut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/spTypeConge"
@@ -100,37 +91,81 @@
                 android:hint="@string/date_debut_text_hint"
                 android:inputType="date" />
 
-
+            <Spinner
+                android:id="@+id/spVacationDateDebut"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/etDateDebut"
+                android:layout_alignStart="@+id/etDateDebut"
+                android:layout_below="@+id/etDateDebut"
+                android:layout_marginTop="16dp" />
 
             <EditText
-                android:id="@+id/etDateFinConge"
+                android:id="@+id/etDateFin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/spTypeConge"
-                android:layout_alignStart="@+id/spTypeConge"
-                android:layout_below="@+id/spTypeConge"
-                android:layout_marginTop="80dp"
+                android:layout_alignLeft="@+id/spVacationDateDebut"
+                android:layout_alignStart="@+id/spVacationDateDebut"
+                android:layout_below="@+id/spVacationDateDebut"
+                android:layout_marginTop="16dp"
                 android:ems="10"
                 android:hint="@string/date_fin_text_hint"
                 android:inputType="date" />
 
+            <Spinner
+                android:id="@+id/spVacationDateFin"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/etDateFin"
+                android:layout_alignStart="@+id/etDateFin"
+                android:layout_below="@+id/etDateFin"
+                android:layout_marginTop="16dp" />
 
+            <EditText
+                android:id="@+id/etNombreJour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/spVacationDateFin"
+                android:layout_alignStart="@+id/spVacationDateFin"
+                android:layout_below="@+id/spVacationDateFin"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Nombre de jour"
+                android:inputType="number" />
 
+            <Spinner
+                android:id="@+id/spStatus"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/etNombreJour"
+                android:layout_alignStart="@+id/etNombreJour"
+                android:layout_below="@+id/etNombreJour"
+                android:layout_marginTop="16dp" />
 
+            <EditText
+                android:id="@+id/etCommentaire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/spStatus"
+                android:layout_alignStart="@+id/spStatus"
+                android:layout_below="@+id/spStatus"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Informations Complementaires"
+                android:inputType="textMultiLine" />
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/spTypeConge"
-                android:layout_marginTop="124dp"
+                android:layout_below="@+id/etCommentaire"
+                android:layout_marginTop="24dp"
                 android:layout_marginBottom="24dp"
-                android:layout_toEndOf="@+id/spTypeConge"
-                android:layout_toRightOf="@+id/spTypeConge"
+                android:layout_toEndOf="@+id/etCommentaire"
+                android:layout_toRightOf="@+id/etCommentaire"
                 android:background="@drawable/blue_button"
                 android:text="@string/save_text_button"
                 android:textAllCaps="false"
-                android:onClick="saveConge"
                 android:textColor="@color/colorWrite"
                 android:textSize="16sp" />
 

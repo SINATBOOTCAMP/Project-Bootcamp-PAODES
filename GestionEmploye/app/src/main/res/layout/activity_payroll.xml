@@ -73,48 +73,25 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/etCodeEmplPayroll"
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:inputType="text"
-                android:hint="Code Employe"
-                android:layout_marginTop="16dp" />
-            <Spinner
-                android:id="@+id/spTypePaiement"
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:layout_alignLeft="@+id/etCodeEmplPayroll"
-                android:layout_alignStart="@+id/etCodeEmplPayroll"
-                android:layout_below="@+id/etCodeEmplPayroll"
-                android:layout_marginTop="15dp" />
+                android:id="@+id/etDatePayroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:ems="10"
+                android:hint="Date (DD/MM/YY)"
+                android:inputType="date" />
 
             <EditText
-                android:id="@+id/etPayrollMontant"
+                android:id="@+id/etMontant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="0dp"
-                android:layout_alignLeft="@+id/spTypePaiement"
-                android:layout_alignStart="@+id/spTypePaiement"
-                android:layout_below="@+id/spTypePaiement"
-                android:ems="5"
+                android:layout_below="@+id/button"
+                android:layout_marginTop="16dp"
+                android:ems="10"
                 android:hint="Montant"
                 android:inputType="number" />
-
-            <EditText
-                android:id="@+id/etDatePayroll"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:ems="10"
-                android:hint="Date (DD/MM/YY)"
-                android:inputType="date"
-                android:layout_alignLeft="@+id/etPayrollMontant"
-                android:layout_alignStart="@+id/etPayrollMontant"
-                android:layout_below="@+id/etPayrollMontant"/>
-
-
 
             <Button
                 android:id="@+id/button"
@@ -128,12 +105,21 @@
                 android:layout_marginRight="11dp"
                 android:background="@color/colorButton"
                 android:text="Enregistrer"
-                android:onClick="savePayroll"
                 android:textAllCaps="false"
                 android:textColor="@color/colorWrite"
                 android:textSize="16sp" />
 
-
+            <EditText
+                android:id="@+id/etCommentaire"
+                android:layout_width="wrap_content"
+                android:hint="Commentaire"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etMontant"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="textMultiLine" />
 
         </RelativeLayout>
 
